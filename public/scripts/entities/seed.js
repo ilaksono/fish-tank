@@ -22,6 +22,7 @@ class Seed extends Denizen {
       this.spawn();
       this.kill();
     }
+    // console.log(this.type);
   }
 
   spawn() {

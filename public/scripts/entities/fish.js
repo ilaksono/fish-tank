@@ -26,7 +26,9 @@ class Fish extends Denizen {
     if (this.timeUntilSpeedChange < 0) {
       this.makeNewVelocity();
     }
+    // console.log(this.position);
   }
+  
 
   makeNewVelocity(minMag) {
     this.swimVelocity = this.generateSwimVelocity(this.maxSwimSpeed, minMag || 0);

@@ -12,7 +12,6 @@ function randRangeInt(min, max) {
   return Math.floor(randRange(min, max + 0.99999));
 }
 
-
 class Vector {
   constructor (x, y) {
     this.x = x;

@@ -1,4 +1,3 @@
-
 class Fishtank {
   constructor(divName) {
     this.divName = divName;
@@ -9,6 +8,12 @@ class Fishtank {
     requestAnimationFrame(this.drawGraphicsBound);
   }
 
+  // onCollision (pos1, pos2) {
+  //   func(d1, d2) <x meters
+  // }
+  // collisionEvent () {
+  //   let isCollision = distance()   
+  // }
   registerSpecies() {
     for (var species of arguments) {
       this.specieses[species.name] = species;

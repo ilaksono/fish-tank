@@ -6,7 +6,9 @@ class BiteFish extends Fish {
     this.maxSurge = 10.0;
     this.surgeSecondsLeft = 0;
     this.surgMult = 3.0;
+    this.type = 'bitefish';
   }
+
   onClick(event) {
     this.surgeSecondsLeft = this.maxSurge;
   }
@@ -18,6 +20,21 @@ class BiteFish extends Fish {
       this.makeNewVelocity();
     }
     this.surgeSecondsLeft = Math.max(0, this.surgeSecondsLeft - PHYSICS_TICK_SIZE_S);
+    this.eatFish();
   }
 
+  eatFish() {
+    let nearbyDenizens = this.tank.getProximateDenizens(this.position, 100);
+    // console.log(nearbyDenizens);
+    for (const fish of nearbyDenizens) {
+      if(fish.id !== this.id && fish.type !== 'bitefish' && fish.type !== 'volcano')
+        this.tank.removeDenizen(fish.id, 0);
+    }
+  }
+  // kill(target) {
+  //   if(Vector.distance(this.position, anotherFish.position) < 1)
+  //     return true;
+  // }
+
 }
+//kill other fish
