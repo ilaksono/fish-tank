@@ -40,13 +40,13 @@ class SpawningFish extends Fish {
     
   } */
   startSpawn() {
-    setInterval(this.spawn(), 3000);
+    let myVar = setInterval(() => this.spawn(), 3000);
   }
 
   spawn() {
     var xVel = randRangeInt(-300, 300);
     var yVel = 400 - Math.abs(xVel);
-    console.log('f', this.tank);
+    console.log('f',);
     var s = new Seed({
       tank: this.tank,
       position: this.position,
