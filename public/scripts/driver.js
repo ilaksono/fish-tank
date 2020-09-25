@@ -7,6 +7,13 @@ $(() => {
     position: new Vector(0, 0)
   });
 
+  for (let i = -400; i <= 400; i+=80) {
+    var rock = new Rock({
+      tank: window.fishtank,
+      position: new Vector(i, 80)
+    });
+  }
+
 });
 
 

@@ -1,7 +1,7 @@
-class Plants extends Denizen {
+class Rocks extends Denizen {
     constructor(options) {
         super(options);
-        this.imageUri = '/images/plant.png'
+        this.imageUri = '/images/rock.png'
         this.position
     }
     
